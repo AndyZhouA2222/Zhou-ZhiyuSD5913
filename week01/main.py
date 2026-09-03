@@ -9,7 +9,7 @@ import datetime
 dotenv.load_dotenv()
 
 # get the year and filename from the environment variables
-year = int(os.getenv('YEAR', 2024))
+year = int(os.getenv('YEAR', 2026))
 filename = os.getenv('FILENAME', "crawled-page-{year}.html").format(year=year)
 
 # initialize the data list
