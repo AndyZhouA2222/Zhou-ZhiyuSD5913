@@ -28,7 +28,7 @@ COLS = 19            # squares across
 ROWS = 24           # squares down — the chaos builds over this many rows
 SEED = 59221        # any integer. Same seed = same image, every time, forever.
 CHAOS = 2.0           # how fast order collapses. 0 = perfect grid. 2 = rubble.
-SQUARE = 810          # size of one square, in svg units
+SQUARE = 10          # size of one square, in svg units
 MARGIN = 60          # breathing room around the grid
 STROKE = "#DB600D"   # line colour
 BACKGROUND = "#faf8f4"
