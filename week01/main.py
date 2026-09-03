@@ -19,7 +19,11 @@ data = []
 if not os.path.exists(filename):
 
     # fetch the page if it doesn't exist
-    page = requests.get(os.getenv('URL'))
+    # Ignore proxy settings inherited from the shell; this URL works directly.
+    session = requests.Session()
+    session.trust_env = False
+    page = session.get(os.getenv('URL'), timeout=30)
+    page.raise_for_status()
 
     # save the page to a file
     with open(filename, 'w', encoding='UTF8') as f:
